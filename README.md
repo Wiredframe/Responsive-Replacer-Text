@@ -1,40 +1,50 @@
-Below are the steps to get your plugin running. You can also find instructions at:
+GitHub Copilot: Sure, here's a possible description for the plugin:
 
-  https://www.figma.com/plugin-docs/plugin-quickstart/
+---
 
-This plugin template uses Typescript and NPM, two standard tools in creating JavaScript applications.
+# Text Style Replacer
 
-First, download Node.js which comes with NPM. This will allow you to install TypeScript and other
-libraries. You can find the download link here:
+This Visual Studio Code plugin allows you to replace multiple text styles in your document with new ones. Simply define the old and new text style names as arrays, and the plugin will replace all occurrences of the old text styles with the new ones.
 
-  https://nodejs.org/en/download/
+## Features
 
-Next, install TypeScript using the command:
+- Replace multiple text styles at once
+- Define the old and new text style names as arrays
+- Supports all text styles in your document
+- Easy to use and customize
 
-  npm install -g typescript
+## Usage
 
-Finally, in the directory of your plugin, get the latest type definitions for the plugin API by running:
+1. Install the plugin from the Visual Studio Code Marketplace
+2. Open the document you want to replace text styles in
+3. Define the old and new text style names as arrays in your code
+4. Run the plugin to replace the old text styles with the new ones
 
-  npm install --save-dev @figma/plugin-typings
+## Example
 
-If you are familiar with JavaScript, TypeScript will look very familiar. In fact, valid JavaScript code
-is already valid Typescript code.
+```typescript
+// Define the old and new text style names as arrays
+const oldTextStyleNames = [ 
+  "Heading / Giant / Bold",
+  "Heading / Giant / Semibold",
+  "Heading / Giant / Regular",
+  // ...
+];
+const newTextStyleNames = [ 
+  "Title / Bold",
+  "Title / Semibold",
+  "Title / Regular",
+  // ...
+];
 
-TypeScript adds type annotations to variables. This allows code editors such as Visual Studio Code
-to provide information about the Figma API while you are writing code, as well as help catch bugs
-you previously didn't notice.
+// Replace the old text styles with the new ones
+replaceTextStyles(oldTextStyleNames, newTextStyleNames);
+```
 
-For more information, visit https://www.typescriptlang.org/
+## License
 
-Using TypeScript requires a compiler to convert TypeScript (code.ts) into JavaScript (code.js)
-for the browser to run.
+This plugin is licensed under the [MIT License](LICENSE).
 
-We recommend writing TypeScript code using Visual Studio code:
+---
 
-1. Download Visual Studio Code if you haven't already: https://code.visualstudio.com/.
-2. Open this directory in Visual Studio Code.
-3. Compile TypeScript to JavaScript: Run the "Terminal > Run Build Task..." menu item,
-    then select "npm: watch". You will have to do this again every time
-    you reopen Visual Studio Code.
-
-That's it! Visual Studio Code will regenerate the JavaScript file every time you save.
+Feel free to customize this description to fit your specific needs.
